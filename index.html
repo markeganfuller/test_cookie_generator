@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test Cookie Generator</title>
+
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+        <meta content="utf-8" http-equiv="encoding"/>
+        <meta name="description" content="Test Cookie Generator"/>
+
+        <style>
+            body {
+                color: lightgrey;
+                background: black;
+                font-family: monospace;
+                text-align: center;
+            }
+            div#input {
+                line-height: 5em;
+            }
+            input[type=text] {
+                width: 5em;
+            }
+            div#output_set {
+                display: flex;
+                justify-content: center;
+                background: darkslategrey;
+                word-wrap: anywhere;
+            }
+            div#output_expire {
+                display: flex;
+                justify-content: center;
+                background: darkred;
+                word-wrap: anywhere;
+            }
+            h1 {
+                padding: 0em;
+                margin: 0em;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Test Cookie Generator</h1>
+        <div id="input">
+            <form>
+                <input type="button" value="Random 1024" onclick="generate_random(1024)"/>
+                <input type="button" value="Random 2048" onclick="generate_random(2048)"/>
+                <input type="button" value="Random 4096" onclick="generate_random(4096)"/>
+                <input type="button" value="Random 8192" onclick="generate_random(8192)"/>
+
+                <br/>
+
+                <label for="name">Cookie name</label>
+                <input type="text" id="name"></input>
+                <label for="size">Cookie total size</label>
+                <input type="text" id="size"></input>
+                <input type="button" value="Custom" onclick="generate_custom()"/>
+            </form>
+        </div>
+        <div id="output_set">
+        </div>
+        <div id="output_expire">
+        </div>
+    </body>
+    <script src="test_cookie_generator.js"></script>
+</html>
